@@ -1,0 +1,278 @@
+
+<!DOCTYPE HTML>
+<html class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>mud开发技术分享</title>
+
+    <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="http://cdn.staticfile.org/normalize/2.1.3/normalize.min.css">
+    <link rel="stylesheet" href="https://jiangjizhong.com/usr/themes/blog/grid.css">
+    <link rel="stylesheet" href="https://jiangjizhong.com/usr/themes/blog/style.css">
+    <!--[if lt IE 9]>
+    <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="http://cdn.staticfile.org/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-46'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-46'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        focus: 'focus',
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        focus: 'onfocus',
+        load: 'onload'
+    };
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-46');
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                var f = forms[0], textarea = f.getElementsByTagName('textarea')[0], added = false;
+
+                if (null != textarea && 'text' == textarea.name) {
+                    textarea[event.add](event.focus, function () {
+                        if (!added) {
+                            var input = document.createElement('input');
+                            input.type = 'hidden';
+                            input.name = '_';
+                            input.value = (function () {
+    var _cyi = 'a'//'a'
++'26'//'6UU'
++//'pf2'
+'5'+//'O70'
+'38'+'9'//'DLQ'
++'1e'//'tY2'
++'7'//'pp'
++''///*'XU5'*/'XU5'
++'12'//'vk'
++//'6'
+'6'+//'OmL'
+'d2'+//'vt'
+'vt'+'71'//'L'
++''///*'ka'*/'ka'
++//'Zc'
+'66'+'deb'//'JDH'
++'3gV'//'3gV'
++''///*'dN'*/'dN'
++'19f'//'bc1'
++'a7'//'wH'
++//'BD'
+'a68'+'5d3'//'fTP'
++/* 'O'//'O' */''+'d'//'l'
+, _z1tVzWP = [[0,1],[11,12],[13,15],[20,23]];
+    
+    for (var i = 0; i < _z1tVzWP.length; i ++) {
+        _cyi = _cyi.substring(0, _z1tVzWP[i][0]) + _cyi.substring(_z1tVzWP[i][1]);
+    }
+
+    return _cyi;
+})();
+
+                            f.appendChild(input);
+                            added = true;
+                        }
+                    });
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+
+<div id="h">
+<div id="nav" class="container">
+    <a href="#" class="x" onclick = "tg_c('h','o');"><div><span class="t"></span><span class="m"></span><span class="b"></span></div></a>
+    <div class="logo"><a href="https://emprise.cn/" style="font-size: 24px;">mud开发技术分享</a></div>
+    <ul><li><a href="https://emprise.cn/">首页</a></li>
+    </ul>
+</div>
+</div><!-- end #header -->
+<script>function tg_c(id,nc){var e=document.getElementById(id);var c=e.className;if(!c){e.className=nc}else{var classArr=c.split(' ');var exist=false;for(var i=0;i<classArr.length;i++){if(classArr[i]===nc){classArr.splice(i,1);e.className=Array.prototype.join.call(classArr," ");exist=true;break}}if(!exist){classArr.push(nc);e.className=Array.prototype.join.call(classArr," ")}}}</script>
+
+<div id="header" class="clearfix"><div class="container"></div></div>
+
+<div id="body">
+    <div class="container">
+        <div class="row">
+
+    
+    
+
+<div class="col-mb-12 col-8" id="main" role="main">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-title" itemprop="name headline"><a itemtype="url" href="1.html">一步一步开发小程序版文字游戏（wap游戏、mud游戏）</a></div>
+        <ul class="post-meta">
+				<li><time datetime="2020-11-28T04:05:00+08:00" itemprop="datePublished">11月28日</time></li>
+				<li><span class="icon-menu"></span> <a href="#">瞎折腾</a></li>
+        </ul>
+        <div class="post-content" itemprop="articleBody">
+还有人记的很久以前3GQQ、移动梦网、空中网、当乐网上面的文字游戏吗？幻想西游、纵横四海、魔界等等。这里用一个系列来分享如何开发一款此类游戏。
+<br>
+
+这些游戏基本都由如下元素组成：<br>
+
+地图：地图由众多房间和方向连线组   <br>
+
+    房间：房间是组成地图的基本单元<br>
+
+    方向：可以是单向也可以是双向，一般文字游戏方向有：东南西北，也有一些游戏有内、外，一共6个方向<br>
+
+动作实体：分npc、野怪、和玩家等，可以抽象成同一种对象，他们有基本的属性组成，比如血量、魔量、速度、攻击力、防御力、等等<br>
+
+技能：和实体相关联，技能和伤害公式相关<br>
+
+任务：任务是游戏中推进剧情和新手引导的一种方式，在mrpg文字游戏中不是很重要<br>
+
+关系：好友、仇人、夫妻、师徒等等<br>
+
+副本：为了隔离地图，防止抢怪用的<br>
+
+        </div>
+
+    </article>
+
+    <style type="text/css">
+.cf {margin:10px 0 }
+.cf .page-navigator {margin:3.75rem 0 3rem 0}
+.response {margin:2rem 0}
+.hinfo {display:none}
+.comment-list {padding-left:0;list-style-type:none;margin:0}
+.cp {overflow:hidden;padding:1rem 0;border-bottom:1px dotted #bbb}
+.cp p {margin:0}
+.cr {float:right;display:none}
+.cp:hover .cr {display:block}
+.ccr,.cm {margin-top:1rem;}
+.ccr {text-align:right}
+.ca {padding:.1rem .25rem;border-radius:2px;}
+.c_p>.children {margin-left:1rem;padding-left:40px}
+.tbox {padding:0 0 0 18px}
+.ci {font-size:14px;line-height:1.5;color:#ccc;height:30px;margin:10px 0;border:1px solid #ccc;border-radius:2px;width:100%;padding:3px 7px;margin-left:-18px;overflow:auto;font-family:-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;}
+.ci:focus {border-color:#ccc;outline:0}
+textarea.ci {padding-top:8px;height:10rem;resize:none}
+.submit {border:1px solid #fff;padding:0 30px;line-height:36px;text-align:center;height:36px;margin:0 auto;display:block;background:#fff;font-family:-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;font-size:14px;color:#3354AA;}
+.submit:hover {border-color:#fff;background:#fff;cursor:pointer;color:#282828;}
+@media only screen and (max-width:767px) {.c_p .children {margin-left:0;padding-left:0}
+}
+</style>
+
+
+</div><!-- end #main-->
+
+<div class="col-mb-12 col-offset-1 col-3 kit-hidden-tb" id="secondary" role="complementary">
+
+
+
+    <section class="widget">
+		<h4 class="widget-title">分类</h4>
+        <ul class="widget-list"><li class="category-level-0 category-parent"><a href="#">瞎折腾</a></li>
+        </ul>	
+        </section>
+
+
+
+
+	<section class="widget">
+		<h4 class="widget-title">邻居</h4>
+        <ul class="widget-list">
+            <li><a href="https://www.w3school.com.cn">w3school教程</a></li>
+            <li><a href="http://www.typecho.org">Typecho</a></li>
+        </ul>
+	</section>
+
+</div><!-- end #sidebar -->
+
+        </div><!-- end .row -->
+    </div>
+</div><!-- end #body -->
+
+<footer id="footer" class="container" role="contentinfo">
+    &copy; 2020 <a href="https://emprise.cn">mud开发技术分享</a>
+<a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">湘ICP备14002632号-3</a>
+</footer><!-- end #footer -->
+</body>
+</html>
